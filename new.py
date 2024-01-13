@@ -60,7 +60,7 @@ def desc_calc():
     os.remove('molecule.smi')
 
 def multi(input_data):
-    load_model = pk.load(open('Tuberculosis_HistGradientBoostingRegressor.sav', 'rb'))
+    load_model = pk.load(open('Tuberculosis_AdaBoostRegressor.sav', 'rb'))
     # Apply model to make predictions
     prediction = load_model.predict(input_data)
     st.header('**Prediction output**')
