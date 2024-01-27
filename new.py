@@ -123,14 +123,14 @@ if uploaded_file is not None:
 
 
                 # Read in calculated descriptors and display the dataframe
-                st.header('**Calculated molecular descriptors**')
+                st.header('**molecular descriptors**')
                 desc = pd.read_csv('descriptors_output.csv')
                 namer=desc["Name"]
                 st.write(desc)
                 st.write(desc.shape)
             
                 # # Read descriptor list used in previously built model
-                st.header('**Subset of descriptors from previously built models**')
+                st.header('**Subset of molecular descriptors**')
                 Xlist = list(pd.read_csv('descriptor_list.csv').columns)
                 desc_subset = desc[Xlist]
                 st.write(desc_subset)
